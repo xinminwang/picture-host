@@ -1,13 +1,15 @@
 #include<stdlib.h> 
 #include<stdio.h> 
-//#define LIST(T) typedef struct node	{T value;struct node *next;} *NODE;
+#define LIST(T) typedef struct node	{T value;struct node *next;} *NODE;
 
+/*上面那句可以用这下面几行代替
 #define LIST(T) 			\
 typedef struct node			\
 {					\
 	T value;			\
 	struct node *next;		\
 } *NODE;
+*/
 
 void fun1(void);
 void fun2(void);
