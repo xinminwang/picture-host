@@ -4,8 +4,8 @@
 
 #define LIST(T) 			\
 typedef struct node			\
-{							\
-	T value;				\
+{					\
+	T value;			\
 	struct node *next;		\
 } *NODE;
 
@@ -20,7 +20,7 @@ int main(void)
 	fun3();
 	return 0;	
 }
-void fun1(void)//½¨Á¢intÀàÐÍµÄÁ´±í 
+void fun1(void)//å»ºç«‹intç±»åž‹çš„é“¾è¡¨ 
 {
 	LIST(int);
 	NODE lianbiao;
@@ -28,22 +28,22 @@ void fun1(void)//½¨Á¢intÀàÐÍµÄÁ´±í
 	lianbiao->value=8;
 	printf("%d\n",lianbiao->value);
 }
-void fun2(void)//½¨Á¢charÀàÐÍÁ´±í 
+void fun2(void)//å»ºç«‹charç±»åž‹é“¾è¡¨ 
 {
-	LIST(char);//±»Ìæ»»Îªtypedef struct node	{char value;struct node *next;} *NODE;  charÁ´±íÀàÐÍ¶¨Òå
-	NODE lianbiao1; //Ê¹ÓÃcharÀàÐÍÁ´±í£¬¶¨ÒåÒ»¸öÁ´±í£¨±äÁ¿£©¡£
-	lianbiao1=(NODE)malloc(sizeof(struct node));//¶ÔÕâ¸öÁ´±í£¨±äÁ¿£©·ÖÅä¶¯Ì¬ÄÚ´æ£¬²¢Ç¿×ªÎªNODEÀàÐÍµÄÁ´±í£¨Ç¿×ªÎª¶¨ÒåÕâ¸öÁ´±í£¨±äÁ¿£©µÄÀàÐÍ£©
-	//ÏÂÃæÊ¹ÓÃÕâ¸öÁ´±í
+	LIST(char);//è¢«æ›¿æ¢ä¸ºtypedef struct node	{char value;struct node *next;} *NODE;  charé“¾è¡¨ç±»åž‹å®šä¹‰
+	NODE lianbiao1; //ä½¿ç”¨charç±»åž‹é“¾è¡¨ï¼Œå®šä¹‰ä¸€ä¸ªé“¾è¡¨ï¼ˆå˜é‡ï¼‰ã€‚
+	lianbiao1=(NODE)malloc(sizeof(struct node));//å¯¹è¿™ä¸ªé“¾è¡¨ï¼ˆå˜é‡ï¼‰åˆ†é…åŠ¨æ€å†…å­˜ï¼Œå¹¶å¼ºè½¬ä¸ºNODEç±»åž‹çš„é“¾è¡¨ï¼ˆå¼ºè½¬ä¸ºå®šä¹‰è¿™ä¸ªé“¾è¡¨ï¼ˆå˜é‡ï¼‰çš„ç±»åž‹ï¼‰
+	//ä¸‹é¢ä½¿ç”¨è¿™ä¸ªé“¾è¡¨
 	lianbiao1->value='a';
 	printf("%c\n",lianbiao1->value);
 }
-void fun3(void) //½¨Á¢×Ô¶¨ÒånihaoÀàÐÍµÄÁ´±í£¨ºÜÖØÒª£© 
+void fun3(void) //å»ºç«‹è‡ªå®šä¹‰nihaoç±»åž‹çš„é“¾è¡¨ï¼ˆå¾ˆé‡è¦ï¼‰ 
 {
 	typedef int nihao;
-	LIST(nihao);//±»Ìæ»»Îªtypedef struct node	{nihao value;struct node *next;} *NODE;  nihaoÁ´±íÀàÐÍ¶¨Òå
-	NODE lianbiao2; //Ê¹ÓÃcharÀàÐÍÁ´±í£¬¶¨ÒåÒ»¸öÁ´±í£¨±äÁ¿£©¡£
-	lianbiao2=(NODE)malloc(sizeof(struct node));//¶ÔÕâ¸öÁ´±í£¨±äÁ¿£©·ÖÅä¶¯Ì¬ÄÚ´æ£¬²¢Ç¿×ªÎªNODEÀàÐÍµÄÁ´±í£¨Ç¿×ªÎª¶¨ÒåÕâ¸öÁ´±í£¨±äÁ¿£©µÄÀàÐÍ£©
-	//ÏÂÃæÊ¹ÓÃÕâ¸öÁ´±í
+	LIST(nihao);//è¢«æ›¿æ¢ä¸ºtypedef struct node	{nihao value;struct node *next;} *NODE;  nihaoé“¾è¡¨ç±»åž‹å®šä¹‰
+	NODE lianbiao2; //ä½¿ç”¨charç±»åž‹é“¾è¡¨ï¼Œå®šä¹‰ä¸€ä¸ªé“¾è¡¨ï¼ˆå˜é‡ï¼‰ã€‚
+	lianbiao2=(NODE)malloc(sizeof(struct node));//å¯¹è¿™ä¸ªé“¾è¡¨ï¼ˆå˜é‡ï¼‰åˆ†é…åŠ¨æ€å†…å­˜ï¼Œå¹¶å¼ºè½¬ä¸ºNODEç±»åž‹çš„é“¾è¡¨ï¼ˆå¼ºè½¬ä¸ºå®šä¹‰è¿™ä¸ªé“¾è¡¨ï¼ˆå˜é‡ï¼‰çš„ç±»åž‹ï¼‰
+	//ä¸‹é¢ä½¿ç”¨è¿™ä¸ªé“¾è¡¨
 	nihao a;
 	scanf("%d",&a);
 	lianbiao2->value=a;
